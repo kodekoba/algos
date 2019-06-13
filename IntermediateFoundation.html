@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Intermediate Foundation</title>
+</head>
+<body>
+    <script>
+        function sigma(num){
+            if (num < 0){
+                return "Function can not be returned";
+            }
+            var sum = 0;
+            for (i = num; i > 0; i--){
+                sum = sum + i;
+            }
+            return sum;
+        }
+        console.log(sigma(3));
+        console.log(sigma(-3));
+
+        function factorial(num){
+            if (num < 0){
+                return "Function can not be returned";
+            }
+            var prod = 1;
+            for (i = 1; i <= num; i++){
+                prod = prod * i;
+            }
+            return prod;
+        }
+        console.log(factorial(5))
+        console.log(factorial(-5))
+    
+        function fib1(n){
+            if (n < 2){
+                return n;
+            }
+            var Phi = (1 + Math.sqrt(5)) / 2;
+            var phi = (1 - Math.sqrt(5)) / 2
+            return (Math.pow(Phi, n) - Math.pow(phi, n)) / Math.sqrt(5);
+        }
+        console.log(fib1(1));
+        console.log(fib1(7));
+        
+        function fib2(n){
+            if (n < 2){
+                return n;
+            }
+            arr = [0,1];
+            for (i = 0; i < n - 1; i++){
+                arr.push(arr[i]+arr[i+1]);
+            }
+            return arr[n];
+        }
+        console.log(fib2(1));
+        console.log(fib2(7));
+
+        function secondToLast(arr){
+            if (arr.length < 2){
+                return null;
+            }
+            return arr[arr.length-2];
+        }
+        console.log(secondToLast([42, true, 4, "Liam", 7]));
+        console.log(secondToLast([42]));
+
+        function nthToLast(arr,n){
+            if (n > arr.length){
+                return null;
+            }
+            return arr[arr.length - n]
+        }
+        console.log(nthToLast([5,2,3,6,4,9,7],3));
+        console.log(nthToLast([5,2],3));
+
+        function secondLargest(arr){
+            if (arr.length < 2){
+                return null;
+            }
+            for(i = 0; i < arr.length - 1; i++){
+                if (arr[i] > arr[i+1]){
+                    temp = arr[i];
+                    arr[i]= arr[i+1];
+                    arr[i+1] = temp;
+                }
+            }
+            for(i = 0; i < arr.length - 2; i++){
+                if (arr[i] > arr[i+1]){
+                    temp = arr[i];
+                    arr[i]= arr[i+1];
+                    arr[i+1] = temp;
+                }
+            }
+            return arr[arr.length - 2];
+        }
+        console.log(secondLargest([42,1,4,3.14,7]));
+        console.log(secondLargest([8]));
+
+        function doubleTrouble(arr){
+            for (i = 0; i < arr.length; i=i+2){
+                arr.splice(i, 0, arr[i]);
+            }
+            return arr;
+        }
+        console.log(doubleTrouble([4, "Ulysses", 42, false]));
+
+        function fib(n){ //recursion
+            if (n < 2){
+                return n;
+            }
+            else {
+                return (fib(n-1) + fib(n-2));
+            }
+        }
+        console.log(fib(1));
+        console.log(fib(7));
+
+    </script>
+</body>
+</html>
