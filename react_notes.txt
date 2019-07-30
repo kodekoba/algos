@@ -1,0 +1,107 @@
+https://www.edureka.co/blog/interview-questions/react-interview-questions/
+https://www.toptal.com/react/interview-questions
+
+What are some major advantages of React??
+    UI Testing is simple
+    Increases application performance / faster
+    The readability of JSX is easier than other frameworks
+        JSX, is a React extension that allows us to write JavaScript that looks like HTML
+        JSX on one single file
+    Can integrate other frameworks into React
+
+What is a key in React and what is the purpose?
+    Identifiers given to data (usually array items) so React can change if that item is changed
+        Such as unique IDs that increment numbers when changed
+
+What is the single source of truth (the global store) in Redux?
+    There is a global store that can be used to track changes across the entire application
+        All of this information is held inside this Redux store
+        A single state tree comes from this Redux store
+
+Differences between stateless component and stateful component?
+    Stateful:
+        Can store information in memory
+        Have authority to change state
+        Contains knowledge of past, present, future changes made to state
+        Can pass state down to stateless components as props 
+    Stateless:
+        Can't store information in memory
+        Can not change state
+        No knowledge of changes made to state
+        Can receive props from stateful components and treat them as callback functions
+
+Advantage of React as a Server-Side Renderer (SSR)?
+    App is able to pre-render the initial state of a view before showing it to the user
+    When a user loads a webpage, they get to see it as the designers and developers intended
+        without having to wait for their browser to download the JavaScript necessary to render the page
+
+What is the virtual DOM and how does it work?
+    Models two copies of the DOM: original and an updated copy
+    React takes note of the differences and outputs the DOM operations necessary to only update what in the UI needs change
+        Prevents the entire view from having to be recreated
+=================================================================
+~~~ DEFINITIONS ~~~
+State:
+    is internal dataset which affects the rendering of the component
+    can be considered as the private data or data model of React components
+
+Components:
+    let you split the UI into independent, reusable pieces, and think about each piece in isolation
+    are like JavaScript functions: they accept arbitrary inputs (called “props”) and return React elements describing what should appear on view
+
+Props:
+    short for properties: properties of React components
+    look like HTML attributes
+    values of props are commonly passed from the parent component
+
+function Welcome(props) {
+  return <h1>Hello, {props.name}</h1>;
+}
+const element = <Welcome name="Sara" />;
+ReactDOM.render(                            // renders "Hello Sara"
+  element,
+  document.getElementById('root')
+);
+
+HOCs:
+    higher-order component is an advanced technique for reusing component logic
+    is a function that takes a component and returns a new component
+        Whereas a component transforms props into UI, a higher-order component transforms a component into another component
+
+Lifecycle Methods:
+    special methods on the component class to run some code when a component mounts and unmounts
+
+Hooks:
+    let you use state and other React features without writing a class
+    allow you to reuse stateful logic without changing your component hierarchy
+    let you split one component into smaller functions based on what pieces are related (such as setting up a subscription or fetching data)
+    
+=================================================================
+!!!!!! Whiteboarding section !!!!!!
+
+How to create an event in React:
+    class Event extends React.Component({
+        event(evt){
+            // logic of what the event does
+        },
+        render(){
+            return (
+                <button onClick=(this.event)>Click Me!</button>
+            )
+        }
+    })
+
+What is the equivalent of the following using React.createElement ?
+    // given:
+    const element = (
+        <h1 className="greeting">
+            Hello world!
+        </h1>
+    );
+
+    //equivalent to
+    const element = React.createElement(
+        'h1',
+        {className: "greeting"}
+        'Hello world!'
+    )
