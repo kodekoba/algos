@@ -1,0 +1,56 @@
+https://hackr.io/blog/angular-interview-questions
+
+What is Angular?
+    Angular is a TypeScript-based open-source web application framework, 
+    developed and maintained by Google. It offers an easy and powerful way of 
+    building front end web-based applications.
+
+Advantages:
+    Follows the MVC pattern architecture
+    Two-way binding
+    Supports dependency injection, RESTful services, and validations
+Disadvantages:
+    Complex SPAs can be inconvenient and laggy to use due to their size
+    Dynamic applications do not always perform well
+
+How to generate a class/service/component in Angular 7 using CLI?
+    ng generate class Dummy [options]
+    ng g s Dummy
+    ng g c Dummy
+
+Could you explain services in Angular?
+    Singleton objects in Angular that get instantiated only once during the lifetime of an 
+    application are called services. An Angular service contains methods that maintain the 
+    data throughout the life of an application.
+
+What is string interpolation in Angular?
+    Also referred to as moustache syntax, string interpolation in Angular refers to a special 
+    type of syntax that makes use of template expressions in order to display the component data
+    ex: {{object.name}}
+
+Can you explain the concept of scope hierarchy in Angular?
+    In a scope hierarchy, each view has its own $scope. Hence, the variables set by a view’s view 
+    (child scope) controller will remain hidden to other view controllers.
+
+What are directives in Angular?
+    Directives are one of the core features of Angular. They allow an Angular developer to write 
+    new, application-specific HTML syntax. In actual, directives are functions that are executed 
+    by the Angular compiler when the same finds them in the DOM. Directives are of three types:
+
+    Attribute Directives:
+        ngClass
+        ngStyle
+    Component Directives: w.e
+    Structural Directives:
+        *ngIf
+        *ngFor
+        *ngSwitch
+
+
+What is the point of Subscribe and Observables?
+    Observables are declarative—that is, you define a function for publishing values, 
+    but it is not executed until a consumer subscribes to it. The subscribed consumer then 
+    receives notifications until the function completes, or until they unsubscribe.
+
+    OBSERVABLES ARE FUNCTIONS YOU CREATE TO PASS DATA WHEN A CONSUMER TRIGGERS AN EVENT 
+    WHICH MAKES THEM SUBSCRIBE. THE CONSUMER RECEIVES NOTIFS UNTIL FXN IS COMPLETE OR THEY UNSUBSCRIBE
