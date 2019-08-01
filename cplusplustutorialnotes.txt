@@ -1,0 +1,10 @@
+C++ Tutorial for Beginners - Full Course notes
+https://www.youtube.com/watch?v=vLnPwxZdW4Y
+
+C++ is basically the next level of C language
+
+Setup for mac:
+    Have a text editor prepared
+    Code Blocks is specially designed for C++
+    C++ compiler => translates the code to what the computer can understand
+    
